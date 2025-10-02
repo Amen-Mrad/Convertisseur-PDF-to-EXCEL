@@ -8,6 +8,9 @@ build/
 dist/
 *.spec
 
+# ignorer fichiers de build spécifiques
+build/lancer_convertisseur/
+
 # ignorer fichiers temporaires Python
 __pycache__/
 *.pyc
