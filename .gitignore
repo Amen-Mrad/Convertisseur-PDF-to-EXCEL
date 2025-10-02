@@ -1,6 +1,7 @@
 # ignorer environnement virtuel
 .venv/
 venv/
+env/
 
 # ignorer build PyInstaller
 build/
@@ -11,3 +12,33 @@ dist/
 __pycache__/
 *.pyc
 *.pyo
+*.py[co]
+
+# ignorer fichiers de configuration IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ignorer fichiers système
+.DS_Store
+Thumbs.db
+
+# ignorer fichiers de logs
+*.log
+
+# ignorer fichiers temporaires
+*.tmp
+*.temp
+
+# ignorer fichiers de sauvegarde
+*.bak
+*_backup.py
+
+# ignorer fichiers Excel générés
+*.xlsx
+*.xls
+
+# ignorer fichiers PDF de test
+test_*.pdf
+*_test.pdf
