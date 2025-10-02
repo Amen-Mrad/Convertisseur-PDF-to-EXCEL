@@ -1,0 +1,13 @@
+# ignorer environnement virtuel
+.venv/
+venv/
+
+# ignorer build PyInstaller
+build/
+dist/
+*.spec
+
+# ignorer fichiers temporaires Python
+__pycache__/
+*.pyc
+*.pyo
