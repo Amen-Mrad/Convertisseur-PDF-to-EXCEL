@@ -1301,7 +1301,7 @@ class ZitounaExtraitConverter:
     def _format_excel(self, path: str):
         wb = load_workbook(path)
         ws = wb.active
-        ws.title = "Extrait Zitouna"
+        ws.title = "J03"
         
         # Styles
         yellow = PatternFill(start_color="FFF59D", end_color="FFF59D", fill_type="solid")

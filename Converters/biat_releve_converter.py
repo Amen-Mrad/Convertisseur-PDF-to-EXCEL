@@ -369,24 +369,23 @@ class BIATReleveConverter:
             import re
             
             libelle_upper = line.upper()
-            
-            # Mots-clés qui indiquent généralement un CRÉDIT (entrée d'argent)
+             # Mots-clés qui indiquent généralement un CRÉDIT (entrée d'argent)
             credit_keywords = [
-                "ENCAISSEMENT", "VERSEMENT", "DEBLOCAGE", "CREDIT",
-                "VIREMENT RECU", "REMBOURSEMENT", "INTERET", "DIVIDENDE","ANNUL",
-                "VIREMENT VERS", "VIREMENT DE", "VIREMENT DEPUIS",
-                "COMPENSATION", "AVOIR", "REMISE", "DEPOT",
-                "ENCAISSEMENT CHEQUE", "ENCAISSEMENT EFFET", "ENCAISSEMENT VIR"
+            "ENCAISSEMENT", "VERSEMENT", "DEBLOCAGE", "CREDIT",
+            "REMBOURSEMENT", "INTERET", "DIVIDENDE", "ANNUL",
+            "VIREMENT DE", "VIREMENT DEPUIS",
+            "COMPENSATION", "AVOIR", "REMISE", "DEPOT",
+            "ENCAISSEMENT CHEQUE", "ENCAISSEMENT EFFET", "ENCAISSEMENT VIR"
             ]
-            
-            # Mots-clés qui indiquent généralement un DÉBIT (sortie d'argent)
+
+        # Mots-clés qui indiquent généralement un DÉBIT (sortie d'argent)
             debit_keywords = [
-                "VIREMENT TN AUTRE BQ", "VIREMENT TN MEME BQ", "COMMISSION",
-                "FRAIS", "AGIOS", "PRELEVEMENT", "RETRAIT", "CHEQUE IMPAYE",
-                "EFFET IMPAYE", "COTISATION", "REGLEMENT CHEQUE", "VIR ORD CARTE",
-                "VIREMENT POUR", "VIREMENT A", "VIREMENT VERS", "VIREMENT EMIS", "REDRESSEMENT",
-                "ACHAT TPE", "COM ET TVA", "COM TVA", "CHEQUE PREAVISE",
-                "REGLEMENT", "PAIEMENT", "SORTIE", "DEBIT"
+            "PRINCIPAL", "VIREMENT", "AGIOS", "VIREMENT TN AUTRE BQ", "VIREMENT TN MEME BQ", "COMMISSION",
+            "FRAIS", "PRELEVEMENT", "RETRAIT", "CHEQUE IMPAYE",
+            "EFFET IMPAYE", "COTISATION", "REGLEMENT CHEQUE", "VIR ORD CARTE",
+            "VIREMENT POUR", "VIREMENT A", "VIREMENT VERS", "VIREMENT EMIS", "REDRESSEMENT",
+            "ACHAT TPE", "COM ET TVA", "COM TVA", "CHEQUE PREAVISE",
+            "REGLEMENT", "PAIEMENT", "SORTIE", "DEBIT"
             ]
             
             # Vérifier d'abord les patterns BIAT spécifiques (priorité haute)
@@ -589,7 +588,7 @@ class BIATReleveConverter:
             # CORRECTION: Ajouter d'autres patterns de débit
             "ACHAT TPE", "COM ET TVA", "COM TVA", "CHEQUE PREAVISE",
             "REGLEMENT", "PAIEMENT", "SORTIE", "DEBIT"
-        ]
+        ]      
         
         # CORRECTION: Logique spéciale pour les virements
         if "VIREMENT" in libelle_upper:
@@ -1039,8 +1038,7 @@ class BIATReleveConverter:
                 print("❌ Erreur: Le fichier sélectionné n'est pas un RELEVE BIAT valide")
                 return
             
-            # Extraire les données
-            
+            # Extraire les données du PDF
             self.root.update()
             
             transactions = self.extract_table_data(self.pdf_path.get())
